@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Dashboard de Graficos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="composicion_nivel.js"></script>
+    <script type="text/javascript" src="asistencia_general.js"></script>
+    <script type="text/javascript" src="asistencia_por_curso.js"></script>
+    <script type="text/javascript" src="evolucion_asistencia.js"></script>
+    <script type="text/javascript" src="calificaciones_general.js"></script>
+    <script type="text/javascript" src="calificaciones_por_curso.js"></script>
+    <script type="text/javascript" src="comunicados.js"></script>
+    <script>
+        // Carga los gráficos de Google Charts y dibuja todos los gráficos al cargar la página.
+        google.charts.load('current', { 'packages': ['corechart', 'table', 'gauge'] });
+        google.charts.setOnLoadCallback(pedirEstudiantes);
+        google.charts.setOnLoadCallback(pedirAsistencia);
+        google.charts.setOnLoadCallback(pedirHistorialAsistencia);
+        google.charts.setOnLoadCallback(pedirCalificaciones);
+        google.charts.setOnLoadCallback(pedirComunicados);
+    </script>
+</head>
+
+<body>
+    <h1>Dashboard de Graficos</h1>
+    <div id="dashboard">
+        <div class="chart-container">
+            <div id="composicion-nivel" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="asistencia-general" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="asistencia-por-curso" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="evolucion-asistencia" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="calificaciones-general" class="chart"></div>
+        </div>
+
+        <div class="chart-container">
+            <div id="calificaciones-por-curso" class="chart"></div>
+        </div>
+
+        <div class="table-chart-container">
+            <table id="comunicados-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Estado</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <div id="indicator-chart-container">
+                <h2>Situación de Envío de Comunicados</h2>
+                <div id="indicator_chart" class="chart"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

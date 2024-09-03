@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+h1 {
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.chart-container {
+    margin: 10px;
+    flex: 1 1 30%;
+    /* Ajusta el ancho de cada gráfico */
+    min-width: 300px;
+    /* Mínimo ancho antes de pasar a la siguiente fila */
+}
+
+.chart {
+    width: 100%;
+    height: 300px;
+    /* Ajusta la altura de los gráficos */
+}
+
+#dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los gráficos bajen a la siguiente fila si no hay espacio */
+    justify-content: center;
+    /* Centra los gráficos en cada fila */
+    width: 100%;
+}
+
+.table-chart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Espacio entre la tabla y el gráfico */
+    align-items: flex-start;
+    /* Alinea los elementos al principio del contenedor */
+    width: 100%;
+    /* Ajusta el ancho del contenedor */
+}
+
+#comunicados-table {
+    width: 60%;
+    /* Ajusta el ancho de la tabla */
+    margin-right: 10px;
+    /* Espacio entre la tabla y el gráfico */
+    box-sizing: border-box;
+    border-collapse: collapse;
+    /* Asegura que las celdas no tengan espacio entre ellas */
+}
+
+#comunicados-table th,
+#comunicados-table td {
+    text-align: center;
+    /* Centra el contenido en las celdas */
+    padding: 8px;
+    /* Añade algo de espacio interno a las celdas */
+}
+
+#curve_chart {
+    width: 50%;
+    /* Ajusta el ancho del gráfico de líneas */
+    height: 300px;
+    /* Ajusta la altura según el espacio disponible */
+    box-sizing: border-box;
+}
+
+#table-chart-container,
+#indicator-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /* Ajusta el ancho del contenedor de la tabla y gráfico */
+}
+
+
+#indicator-chart-container h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    /* Ajusta los estilos del título según sea necesario */
+}
+
+#indicator_chart {
+    width: auto;
+}
